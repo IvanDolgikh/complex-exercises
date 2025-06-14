@@ -1,0 +1,70 @@
+
+#app {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: 500;
+  color: #2a2a2a;
+  margin: 0 0 30px 0;
+}
+
+input[type="text"] {
+  background-color: transparent;
+  border: 2px solid rgb(107, 107, 107);
+  border-radius: 4px;
+  color: #000000;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  padding: 4px 6px;
+  transition: all 0.2s;
+
+  &:hover {
+    border-color: #ffc246;
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-color: #ffc246;
+  }
+
+  &:active {
+    border-color: #ffde9b;
+  }
+}
+
+button {
+  background-color: #ffde9b;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #1f1f1f;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: fit-content;
+
+  &:hover {
+    background-color: #ffc246;
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: #ffc246;
+  }
+
+  &:active {
+    background-color: #ffde9b;
+  }
+}
