@@ -61,56 +61,7 @@ export default defineComponent({
 
   data() {
     return {
-      arrayExercises: [
-        {
-          id: 1,
-          imagePreview: 'src/assets/images/6c7bb734-9050-432a-9597-d40147e275f5.jpg',
-          time: '44',
-          type: '1',
-        },
-        {
-          id: 1,
-          imagePreview: 'src/assets/images/62e255cd10fe2_lg.jpg',
-          time: '60',
-          type: '1',
-        },
-        {
-          id: 1,
-          imagePreview: 'src/assets/images/914babf7-2b1c-4d34-ae36-f056725849f6.jpeg',
-          time: '24',
-          type: '1',
-        },
-        {
-          id: 1,
-          imagePreview: 'src/assets/images/cc9efe4f-eb8d-4fb4-b4de-f17a0bd6f164.jpeg',
-          time: '5',
-          type: '2',
-        },
-        {
-          id: 2,
-          imagePreview: 'src/assets/images/e5ff66445d970e9103f766ce95761403.jpg',
-          time: '7',
-          type: '2',
-        },
-        {
-          id: 3,
-          imagePreview: 'src/assets/images/front-view-sportsman-with-copy-space_23-2148222189.avif',
-          time: '8',
-          type: '2',
-        },
-        {
-          id: 3,
-          imagePreview: 'src/assets/images/hippopotamus.jpeg',
-          time: '5',
-          type: '3',
-        },
-        {
-          id: 3,
-          imagePreview: 'src/assets/images/side-view-sportsman-doing-exercises-windowsill_171337-19706.avif',
-          time: '2',
-          type: '3',
-        }
-      ] as DataItem[],
+      arrayExercises: [] as DataItem[],
 
       infoComplex: {
         firstTypeAmount: 3,

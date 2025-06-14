@@ -45,20 +45,37 @@
         class="adding__save-data"
         @click="emitData"
       >Добавить</button>
+
+      <teleport to='#app'>
+        <ActivitySuccessWindow
+          v-if="isSuccessAdding"
+          :isSuccessAdding="isSuccessAdding"
+          @close-window="closeWindow"
+          class="adding__succes-window"
+        />
+      </teleport>
+
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import ActivitySuccessWindow from './ActivitySuccessWindow.vue'
 
 export default defineComponent({
+
+  components: {
+    ActivitySuccessWindow,
+  },
+
   data() {
     return {
       imagePreview: '',
       time: '',
       type: '',
       id: 0,
+      isSuccessAdding: false,
     }
   },
 
@@ -79,10 +96,13 @@ export default defineComponent({
     },
 
     resetData() {
-      alert('Упражнение добавлено')
       this.imagePreview = ''
       this.time = ''
       this.type = ''
+    },
+
+    closeWindow() {
+      this.isSuccessAdding = !this.isSuccessAdding
     },
 
     emitData() {
@@ -93,6 +113,7 @@ export default defineComponent({
         type: this.type,
       };
       this.$emit('saveData', data);
+      this.isSuccessAdding = !this.isSuccessAdding
       this.resetData()
     }
   },
@@ -103,6 +124,7 @@ export default defineComponent({
 .adding {
 
   &__container {
+    position: relative;
     display: flex;
     flex-direction: column;
     flex: 1;
